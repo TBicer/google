@@ -1,2 +1,2 @@
 # google
-[google.tbicer.com](Go to website)
+[Go to website](https://google.tbicer.com)
