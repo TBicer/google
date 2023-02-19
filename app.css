@@ -6,19 +6,25 @@
   font: 13px/27px Roboto, Arial, sans-serif;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60px 1fr 95px;
+  width: 100vw;
+  height: 100vh;
+}
+
 /* Header Section */
 .header-container {
-  width: 100%;
-  min-height: 70px;
-  max-height: 70px;
-  height: 8vh;
+  grid-column: 1/-1;
+  width: 100vw;
   display: flex;
   justify-content: flex-end;
 }
 .nav-container {
   display: flex;
-  gap: 30px;
-  padding: 10px 30px 10px 0;
+  width: 370px;
+  justify-content: space-around;
   align-items: center;
 }
 .nav-link {
@@ -60,8 +66,8 @@
 
 /* Hero Section */
 .hero-container {
-  width: 100%;
-  height: 80vh;
+  width: 100vw;
+  grid-column: 1/-1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,4 +134,66 @@
   box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
   border: 1px solid #dadce0;
   color: #202124;
+}
+
+/* Footer Container */
+.footer-container {
+  grid-column: 1/-1;
+  width: 100vw;
+  background-color: gray;
+  justify-self: flex-end;
+  background-color: #f2f2f2;
+  display: grid;
+  grid-template-rows: 48px 1fr;
+}
+.country-container {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 30px;
+  border-bottom: 1px solid #dadce0;
+  font-size: 15px;
+  color: #70757a;
+}
+.footer-nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-nav-left {
+  box-sizing: border-box;
+  flex-grow: 2;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding-left: 30px;
+}
+.footer-nav-link {
+  color: #70757a;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer-nav-link:hover {
+  text-decoration: underline;
+}
+.footer-nav-right {
+  flex-grow: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  padding-right: 30px;
+}
+.carbon-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.carbon-link {
+  text-decoration: none;
+  color: #70757a;
+}
+.carbon-link:hover {
+  text-decoration: underline;
+}
+.carbon-link img {
+  height: 14px;
 }
